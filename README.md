@@ -1,1 +1,1 @@
-# Sample Code for Seeed Studio E-inks
+# Sample Code for Seeed Studio E-Ink display
