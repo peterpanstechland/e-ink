@@ -5,7 +5,7 @@
 #include "demo.h"  
 
 void setup() {
-   pinMode(D6, INPUT);  //BUSY
+   pinMode(D5, INPUT);  //BUSY
    pinMode(D0, OUTPUT); //RES 
    pinMode(D3, OUTPUT); //DC   
    pinMode(D1, OUTPUT); //CS   

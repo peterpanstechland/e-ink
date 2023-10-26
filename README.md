@@ -1,1 +1,1 @@
-# Sample Code for Seeed Studio E-Ink display
+# Sample Code for Seeed Studio E-Ink display with Seeed XIAO E-Ink Driver Board
