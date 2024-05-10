@@ -5,18 +5,26 @@
 #include "demo.h"  
 
 void setup() {
-     pinMode(D5, INPUT);  //BUSY
+   pinMode(D5, INPUT);  //BUSY
    pinMode(D0, OUTPUT); //RES 
    pinMode(D3, OUTPUT); //DC   
    pinMode(D1, OUTPUT); //CS   
-
-  //  pinMode(D3, INPUT);  //BUSY
-  //  pinMode(D4, OUTPUT); //RES 
-  //  pinMode(D5, OUTPUT); //DC   
-  //  pinMode(D6, OUTPUT); //CS 
+   
    //SPI
    SPI.beginTransaction(SPISettings(10000000, MSBFIRST, SPI_MODE0)); 
    SPI.begin ();  
+
+
+    EPD_HW_Init(); //Full screen refresh initialization.
+    EPD_WhiteScreen_White(); //Clear screen function.
+    EPD_DeepSleep(); //Enter the sleep mode and please do not delete it, otherwise it will reduce the lifespan of the screen.
+    delay(2000); //Delay for 2s. 
+    
+   /************Full display(2s)*******************/
+    EPD_HW_Init(); //Full screen refresh initialization.
+    EPD_WhiteScreen_ALL(gImage_demo); //To Display one image using full screen refresh.
+    EPD_DeepSleep(); //Enter the sleep mode and please do not delete it, otherwise it will reduce the lifespan of the screen.
+    delay(2000);; //Delay for 2s. 
 }
 
 //Tips//
@@ -30,16 +38,4 @@ void setup() {
 */
 void loop() {
 
-
-      EPD_HW_Init(); //Full screen refresh initialization.
-      EPD_WhiteScreen_White(); //Clear screen function.
-      EPD_DeepSleep(); //Enter the sleep mode and please do not delete it, otherwise it will reduce the lifespan of the screen.
-      delay(2000); //Delay for 2s. 
-     /************Full display(2s)*******************/
-      EPD_HW_Init(); //Full screen refresh initialization.
-      EPD_WhiteScreen_ALL(gImage_demo); //To Display one image using full screen refresh.
-      EPD_DeepSleep(); //Enter the sleep mode and please do not delete it, otherwise it will reduce the lifespan of the screen.
-      delay(2000);; //Delay for 2s. 
-  while(1); // The program stops here
-  
 } 

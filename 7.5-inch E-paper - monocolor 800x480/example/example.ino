@@ -141,7 +141,8 @@ void loop() {
 		delay(2000);	//Delay for 2s.	
 
 // #endif
- while(1);  // The program stops here   
+
+    delay(300000);  // The program stops here   
 }
 
 

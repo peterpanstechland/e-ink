@@ -64,7 +64,8 @@ void loop() {
     // EPD_init(); //EPD init
     // Display_All_White();
     // EPD_sleep();//EPD_sleep,Sleep instruction is necessary, please do not delete!!!
-    while(1);
+
+    delay(300000);  // The program stops here   
 
 }
 
