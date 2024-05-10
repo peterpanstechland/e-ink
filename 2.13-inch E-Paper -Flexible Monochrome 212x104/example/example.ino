@@ -40,8 +40,6 @@ void setup() {
 /*When you need to transplant the driver, you only need to change the corresponding IO. The BUSY pin is the input mode and the others are the output mode. */
 
 void loop() {
-  while(1)
-  {
     EPD_init(); //EPD init
     PIC_display(gImage_1);//EPD_picture1
     EPD_sleep();//EPD_sleep,Sleep instruction is necessary, please do not delete!!!
@@ -57,10 +55,10 @@ void loop() {
     //  EPD_init(); //EPD init
     // PIC_display_Clean();
     // EPD_sleep();//EPD_sleep,Sleep instruction is necessary, please do not delete!!!
-    while(1); 
+
+    delay(300000);  // The program stops here   
 
 
-  }
 
 
 }

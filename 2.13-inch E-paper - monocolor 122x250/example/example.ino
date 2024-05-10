@@ -35,8 +35,8 @@ void loop() {
   EPD_DeepSleep();                   //Enter the sleep mode and please do not delete it, otherwise it will reduce the lifespan of the screen.
   delay(2000);
   ;  //Delay for 2s.
-  while (1)
-    ;  // The program stops here
+
+  delay(300000);  // The program stops here   
 }
 
 

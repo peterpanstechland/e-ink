@@ -73,8 +73,7 @@ void setup() {
 
 
 void loop() {
-  while(1)
-  { 
+
     EPD_init(); //EPD init
     PIC_display(gImage_demo);//EPD_picture1
     EPD_sleep();//EPD_sleep,Sleep instruction is necessary, please do not delete!!!
@@ -95,8 +94,8 @@ void loop() {
     PIC_display_Clear();//EPD Clear
     EPD_sleep();//EPD_sleep,Sleep instruction is necessary, please do not delete!!!
     delay(5000); //5s
-    while(1);  
-  }
+
+    delay(300000);  // The program stops here   
 }
 
 
